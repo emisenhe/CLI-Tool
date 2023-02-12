@@ -1,5 +1,5 @@
 #!/bin/bash
 
 # Mode 1: Install Dependencies 
-# echo $1 will return install 
-echo $1
+cargo build--verbose
+echo "Number of dependencies installed: $deps"
