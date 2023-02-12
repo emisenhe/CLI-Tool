@@ -15,19 +15,23 @@ int main(int argc, char* argv[]) {
                 chdir("CLI-Tool/tool");
                 int installOutput = system("./install.sh");
                 printf(installOutput);
+                exit(0); // Exit 0 on succcess
             }
             else if (strcmp(argv[2],"test") == 0) {
                 int testOutput = system("./test.sh");   // Call test.sh
                 printf(testOutput);
+                exit(0); // Exit 0 on succcess
             }
             else { // file path
                 int rankOutput = system("./rank.sh");   // Call rank.sh
                 printf(rankOutput); 
+                exit(0); // Exit 0 on succcess
             }    
         }
     }
     else {
         fprintf(stderr, "Error, wrong number input of inputs");
+        exit(1); // Exit 1 with an error 
     }
 
     return 0;
